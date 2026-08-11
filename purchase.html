@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="癒見 — 找回身心平衡的健康陪伴旅程">
+  <title>癒見 YUJIAN｜找回身心平衡</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#33372b; --sage:#748665; --sage-dark:#526547; --cream:#f7f6ef; --line:#dfe3d5; }
+    * { box-sizing:border-box; }
+    body { color:var(--ink); font-family:"Noto Sans TC",sans-serif; background:#fff; }
+    h1,h2,h3,.serif { font-family:"Noto Serif TC",serif; }
+    .navbar { min-height:84px; background:rgba(255,255,255,.96); }
+    .brand { color:var(--ink); font-family:"Noto Serif TC",serif; font-size:1.45rem; font-weight:600; letter-spacing:.2rem; line-height:1; }
+    .brand small { display:block; color:var(--sage); font:500 .55rem/1.2 Arial,sans-serif; letter-spacing:.25rem; text-align:center; margin-top:.3rem; }
+    .brand-leaf { color:var(--sage); font-size:2rem; margin-right:.45rem; transform:rotate(-24deg); display:inline-block; }
+    .nav-link { color:var(--ink)!important; font-size:.9rem; margin:0 .8rem; }
+    .hero { min-height:560px; position:relative; display:flex; align-items:center; overflow:hidden; background:linear-gradient(90deg,rgba(248,245,234,.2),rgba(255,250,244,.74)), url('https://images.unsplash.com/photo-1542206395-9feb3edaa68d?auto=format&fit=crop&w=1800&q=85') center 45%/cover; }
+    .hero:after { content:""; position:absolute; inset:auto 0 0; height:34%; background:linear-gradient(transparent,rgba(255,255,255,.78)); }
+    .hero-copy { position:relative; z-index:1; margin-left:48%; padding:4rem 1rem 8rem; }
+    .hero h1 { font-size:clamp(2rem,3.2vw,3.4rem); line-height:1.4; font-weight:600; letter-spacing:.08em; }
+    .hero p { font-size:1.15rem; line-height:1.8; letter-spacing:.08em; }
+    .symptom-box { position:relative; z-index:3; max-width:930px; margin:-110px auto 0; background:rgba(255,255,255,.9); border-radius:18px; box-shadow:0 10px 28px rgba(75,76,56,.12); backdrop-filter:blur(8px); }
+    .symptom { min-height:116px; padding:1rem 1.5rem; text-align:center; border-right:1px solid #d8d8ca; display:flex; flex-direction:column; justify-content:center; }
+    .symptom:last-child { border:0; }
+    .round-icon { width:55px; height:55px; border-radius:50%; background:#eff0e7; color:var(--sage-dark); display:grid; place-items:center; font-size:1.55rem; margin:0 auto .65rem; }
+    .symptom p { margin:0; font-size:.84rem; }
+    .intro { padding:1.05rem 1rem 3.5rem; text-align:center; font-size:1.05rem; }
+    .soft-section { background:linear-gradient(100deg,#fff 0%,#f6f8f5 50%,#fff 100%); }
+    .section-pad { padding:4.5rem 0; }
+    .section-title { text-align:center; margin-bottom:2.6rem; }
+    .section-title h2 { font-size:2rem; letter-spacing:.18em; margin-bottom:.2rem; }
+    .section-title span { color:var(--sage); letter-spacing:.28em; font-size:.78rem; }
+    .about-name { height:100%; padding:2.2rem; border-right:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; }
+    .about-name h2 { font-size:2rem; letter-spacing:.13em; }
+    .about-name p { color:var(--sage-dark); letter-spacing:.2em; font-size:.78rem; }
+    .value { text-align:center; padding:0 1.2rem; }
+    .value .round-icon { width:72px; height:72px; color:#fff; background:radial-gradient(circle at 30% 25%,#93a783,var(--sage-dark)); font-size:2rem; }
+    .value h3 { font-size:1rem; color:var(--sage-dark); margin:1rem 0 .55rem; }
+    .value p { font-size:.82rem; line-height:1.8; margin:0; }
+    .journey { background:var(--cream); }
+    .journey-card { height:100%; padding:2rem 1.6rem; background:rgba(255,255,255,.7); border-radius:16px; text-align:center; }
+    .journey-card .round-icon { background:transparent; border:1px solid var(--sage); width:58px; height:58px; font-size:1.65rem; }
+    .journey-card h3 { color:var(--sage-dark); font-size:1rem; }
+    .journey-card p { font-size:.83rem; line-height:1.85; margin:0; }
+    .arrow { color:var(--sage); font-size:2.3rem; display:flex; align-items:center; justify-content:center; }
+    .feature-card { border:1px solid var(--line); border-radius:12px; padding:1.7rem 1.3rem; height:100%; text-align:center; }
+    .feature-card h3 { color:var(--sage-dark); font-size:1rem; }
+    .feature-card p { font-size:.82rem; line-height:1.8; margin:0; }
+    .listen { background:#fbfcf8; }
+    .listen-img { width:100%; height:270px; object-fit:cover; border-radius:12px; filter:sepia(.15) saturate(.82); }
+    .check { color:#fff; background:var(--sage); width:19px; height:19px; border-radius:50%; display:inline-grid; place-items:center; font-size:.7rem; margin-right:.5rem; }
+    .listen li { margin-bottom:.8rem; font-size:.86rem; line-height:1.6; }
+    .cta { background:linear-gradient(180deg,#fff,#f2f4eb); padding:3.8rem 0 2.6rem; text-align:center; }
+    .cta h2 { font-size:1.75rem; letter-spacing:.15em; }
+    .cta p { color:var(--sage-dark); letter-spacing:.15em; }
+    .btn-sage { background:var(--sage); color:#fff; border-color:var(--sage); }
+    .btn-sage:hover { background:var(--sage-dark); color:#fff; }
+    .btn-outline-sage { color:var(--sage-dark); border-color:var(--sage); }
+    .btn-outline-sage:hover { color:#fff; background:var(--sage); }
+    .cta .btn { min-width:265px; padding:.8rem 1.2rem; border-radius:7px; }
+    @media (max-width: 991.98px) { .hero-copy{margin-left:39%;}.about-name{border-right:0;border-bottom:1px solid var(--line);text-align:center;align-items:center}.arrow{transform:rotate(90deg);min-height:32px}.nav-link{margin:.35rem 0} }
+    @media (max-width: 767.98px) { .navbar{min-height:70px}.hero{min-height:530px;background-position:38% center}.hero-copy{margin-left:0;padding:13rem 1.5rem 5rem;background:linear-gradient(90deg,rgba(255,255,255,.1),rgba(255,255,255,.68));width:100%}.hero h1{font-size:2rem}.hero p{font-size:1rem}.symptom-box{margin:-45px 1rem 0}.symptom{border-right:0;border-bottom:1px solid #d8d8ca;min-height:92px}.symptom:last-child{border-bottom:0}.section-pad{padding:3.4rem 0}.section-title h2{font-size:1.65rem}.listen-img{height:220px}.cta .btn{min-width:0;width:100%} }
+  </style>
+  <!-- 以下為GA全域瀏覽追蹤代碼Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MH7E6C0DG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MH7E6C0DG3');
+</script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand d-flex align-items-center" href="#top"><i class="brand-leaf">❧</i><span>癒見<small>YUJIAN</small></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center"><li class="nav-item"><a class="nav-link" href="#about">癒見初衷</a></li><li class="nav-item"><a class="nav-link" href="#why">為何失衡？</a></li><li class="nav-item"><a class="nav-link" href="#program">旅程內容</a></li><li class="nav-item"><a class="nav-link" href="#listen">聽見身體</a></li><li class="nav-item"><a class="nav-link" href="#reserve">預約相遇</a></li></ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero"><div class="container"><div class="hero-copy"><h1>明明檢查不出原因，<br>為什麼身體還是好累？</h1><p class="mb-0">讓身體不再是疾病的戰場，<br>而是一場與自己重新相遇的起點。</p></div></div></section>
+    <section class="symptom-box"><div class="row g-0"><div class="col-md-4 symptom"><div class="round-icon">◔</div><p>疲憊三點，思緒停不下來？</p></div><div class="col-md-4 symptom"><div class="round-icon">▣</div><p>長期隱形疲勞，越休息越累？</p></div><div class="col-md-4 symptom"><div class="round-icon">◎</div><p>焦慮內耗，自律神經持續空轉？</p></div></div></section>
+    <p class="intro mb-0">我們理解那種「不舒服，但被主流醫療診斷為正常」的孤獨感。</p>
+
+    <section class="soft-section section-pad" id="about"><div class="container"><div class="row g-4 align-items-center"><div class="col-lg-3"><div class="about-name"><h2>癒見初衷</h2><p class="mb-0">WHY・HOW・WHAT</p></div></div><div class="col-lg-3"><div class="value"><div class="round-icon">♥</div><h3>Why｜核心信念</h3><p>在「癒見」，我們相信：真正的療癒，始於遇見自己。健康不該是永無止盡的對抗與壓制，而是學會聽懂身體傳遞的訊號。</p></div></div><div class="col-lg-3"><div class="value"><div class="round-icon">❧</div><h3>How｜達成方式</h3><p>我們不只關注表面的症狀，更重視造成失衡的「根本原因」。透過自然療法與自我覺察的練習，找回身心內在原有的自癒智慧。</p></div></div><div class="col-lg-3"><div class="value"><div class="round-icon">♟</div><h3>What｜產品服務</h3><p>我們提供全人化的健康調整方案，結合自然療癒觀點與身心覺察引導，讓身體找回安定與平衡。</p></div></div></div></div></section>
+
+    <section class="journey section-pad" id="why"><div class="container"><div class="section-title"><h2>為何失衡？</h2><span>PAS 模型</span></div><div class="row align-items-stretch justify-content-center g-3"><div class="col-md-4 col-lg-3"><article class="journey-card"><div class="round-icon">♧</div><h3>Problem｜痛點</h3><p>你是否對「只是找不到病因」的醫療模式感到疲憊？藥物處理了異常，卻沒處理讓你生病的原因。</p></article></div><div class="col-md-1 d-none d-md-flex arrow">›</div><div class="col-md-4 col-lg-3"><article class="journey-card"><div class="round-icon">〰</div><h3>Agitation｜焦慮擴大</h3><p>這種「找不到答案」的迷惘與長期忽視身體的訊號，讓你在焦慮與耗損中越走越遠。</p></article></div><div class="col-md-1 d-none d-md-flex arrow">›</div><div class="col-md-4 col-lg-3"><article class="journey-card"><div class="round-icon">☼</div><h3>Solution｜解決方案</h3><p>「癒見」為你提供一條更溫柔的路徑。我們帶領你覺察與理解，找回健康的主控權。</p></article></div></div></div></section>
+
+    <section class="section-pad" id="program"><div class="container"><div class="section-title"><h2>旅程內容</h2><span>FAB 模型</span></div><div class="row g-4"><div class="col-md-4"><article class="feature-card"><div class="round-icon">❧</div><h3>Features｜服務特色</h3><p>全人自然療法檢測與調整。追溯身體退化的脈絡，評估生活型態與壓力負荷。</p></article></div><div class="col-md-4"><article class="feature-card"><div class="round-icon">♜</div><h3>Advantages｜競爭優勢</h3><p>非對抗性的「合作式健康」模式。不只解決眼前困擾，更陪你找回身心平衡。</p></article></div><div class="col-md-4"><article class="feature-card"><div class="round-icon">☀</div><h3>Benefits｜對客價值</h3><p>得到真正的健康，成為生命的主人。讓你不僅是解決失眠或疲勞，更是遇見那個充滿活力、自在且平衡的自己。</p></article></div></div></div></section>
+
+    <section class="listen section-pad" id="listen"><div class="container"><div class="row align-items-center g-4"><div class="col-md-5"><img class="listen-img" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85" alt="雙手捧著植物的自然意象"></div><div class="col-md-7"><h2 class="serif mb-1">聽見身體</h2><p class="text-muted" style="letter-spacing:.15em">SWOT 優勢｜感性優勢與忠誠度</p><ul class="list-unstyled mb-0"><li><span class="check">✓</span>市場上多的是強調數據的診所，但少有像「癒見」這樣願意聽你說話的空間。</li><li><span class="check">✓</span>我們知道，疾病不只是生理的故障，更是生命的暗面；在這裡，你的情緒會被看見。</li><li><span class="check">✓</span>我們不只提供治療，更提供一套讓你一生受益的「覺察練習」。</li></ul></div></div></div></section>
+  </main>
+  <footer class="cta" id="reserve"><div class="container"><h2>現在，該停下來看看自己了。</h2><p>預約初次「身心相遇」諮詢</p><small class="d-block text-muted mb-3">讓我們一起找到失衡的源頭，開啟你的自癒旅程</small><div class="d-flex flex-column flex-md-row justify-content-center gap-3"><a class="btn btn-sage" href="#reserve">◉　立即加入官方 Line 預約諮詢</a><a class="btn btn-outline-sage btnstyle" href="#about">▰加入購物車</a></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      //addEventListener效果
+    var abc = document.querySelector(".btnstyle");
+    abc.addEventListener(
+      "click",function () {alert("您已將商品加入購物車");},false
+    );
+  </script>
+</body>
+</html>
