@@ -106,7 +106,17 @@
       //addEventListener效果
     var abc = document.querySelector(".btnstyle");
     abc.addEventListener(
-      "click",function () {alert("您已將商品加入購物車");},false
+      "click",function () {gtag("event", "add_to_cart", {
+    currency: "TWD",
+    value: 0,
+    items: [
+      {
+        item_id: "consultation",
+        item_name: "身心相遇諮詢",
+        quantity: 1
+      }
+    ]
+  });alert("您已將商品加入購物車");},false
     );
   </script>
 </body>
