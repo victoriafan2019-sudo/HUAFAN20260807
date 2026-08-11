@@ -63,3 +63,6 @@ USER NAME:victoriafan2019-sudo
 專案名稱:HUAFAN20260807
 HTTPS:https://github.com/victoriafan2019-sudo/HUAFAN20260807.git
 SSH:git@github.com:victoriafan2019-sudo/HUAFAN20260807.git
+
+## GITHUB發布網址
+https://victoriafan2019-sudo.github.io/HUAFAN20260807/
